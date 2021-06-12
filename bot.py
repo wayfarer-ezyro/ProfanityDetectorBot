@@ -39,19 +39,19 @@ async def check_if_admin(message):
 async def start_msg(event):
     sender = await bot.get_entity(event.sender_id)
     await event.reply(
-        f"Hi {sender.first_name}!\nI am a profanity detector bot.\n\nMake me admin in your group with `delete messages` permission and I'll delete messsages containing abuses!",
+        f"Hi {sender.first_name}!\nI am a Profanity Detector Bot.\n\nMake me an admin in your group with `delete messages` permission and I'll delete messsages containing abusing texts!",
         buttons=[
-            [Button.inline("Help 🆘", data="helpme")],
+            [Button.inline("☘️ Help ☘️", data="helpme")],
             [
                 Button.url(
-                    "Add me to a group ➕",
+                    "🦋 Add me to a group 🦋",
                     url=f"http://t.me/{(await bot.get_me()).username}?startgroup=botstart",
                 )
             ],
             [
-                Button.url("📥 Channel", url="https://t.me/BotzHub"),
+                Button.url("🐣 Channel 🐣", url="https://t.me/MarineBos"),
                 Button.url(
-                    "Package 📦", url="https://pypi.org/project/ProfanityDetector/"
+                    "📦 Package 📦", url="https://pypi.org/project/ProfanityDetector/"
                 ),
             ],
         ],
